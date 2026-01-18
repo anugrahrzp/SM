@@ -634,6 +634,61 @@
   background-color: var(--primary-green-light);
 }
 
+/* Life Section (Early Life, etc.) */
+.life-section {
+  margin-bottom: 24px;
+}
+
+.life-video {
+  margin-bottom: 16px;
+}
+
+.life-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.life-details {
+  margin-bottom: 16px;
+}
+
+.life-detail-item {
+  margin-bottom: 12px;
+}
+
+.detail-label {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: #0EA5E9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.detail-value:hover {
+  text-decoration: underline;
+}
+
+.detail-value-text {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--dark-gray);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.life-summary {
+  margin-top: 16px;
+}
+
 /* Not Found */
 .not-found {
   display: flex;

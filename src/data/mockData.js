@@ -40,7 +40,13 @@ export const members = [
     linkedin: 'https://linkedin.com/in/priyasharma',
     instagram: 'https://instagram.com/priya.sharma',
     contentLinks: ['https://medium.com/@priyasharma', 'https://youtube.com/techstartindia'],
-    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true },
+    hometown: 'Pune',
+    bornIn: '1990',
+    school: 'Bishop Cotton School, Pune',
+    college: ['IIT Bombay', 'Stanford University'],
+    interests: ['Technology', 'Education', 'Dance'],
+    earlyLifeSummary: 'Growing up in Pune, I was always fascinated by computers and technology. My father was a professor and instilled in me a love for learning from an early age.'
   },
   {
     id: 'member-002',
@@ -63,7 +69,13 @@ export const members = [
     twitter: 'https://twitter.com/rahulverma_green',
     linkedin: 'https://linkedin.com/in/rahulverma',
     contentLinks: ['https://greenenergy.co/blog'],
-    hasVideos: { earlyLife: true, professionalLife: true, currentLife: false }
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: false },
+    hometown: 'Lucknow',
+    bornIn: '1988',
+    school: 'La Martiniere College, Lucknow',
+    college: ['IIT Delhi', 'IESE Business School'],
+    interests: ['Environment', 'Cycling', 'Sustainability'],
+    earlyLifeSummary: 'Born in Lucknow, I spent my childhood exploring the countryside. The smog in Delhi during my college years motivated me to work on clean energy solutions.'
   },
   {
     id: 'member-003',
@@ -85,7 +97,13 @@ export const members = [
     linkedin: 'https://linkedin.com/in/ananyakrishnan',
     twitter: 'https://twitter.com/ananya_health',
     contentLinks: ['https://healthfirst.com/blog', 'https://anchor.fm/healthfirst-podcast'],
-    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true },
+    hometown: 'Coimbatore',
+    bornIn: '1985',
+    school: 'PSBB School, Chennai',
+    college: ['IIT Madras', 'Stanford University'],
+    interests: ['Healthcare', 'Music', 'Chess'],
+    earlyLifeSummary: 'Born in Coimbatore to a family of doctors, I grew up surrounded by discussions about patient care. My grandmother\'s struggle to access healthcare shaped my career path.'
   },
   {
     id: 'member-004',
@@ -106,7 +124,13 @@ export const members = [
     tags: ['FinTech', 'Payments', 'Inclusion'],
     linkedin: 'https://linkedin.com/in/vikramsingh',
     twitter: 'https://twitter.com/vikram_finleap',
-    hasVideos: { earlyLife: true, professionalLife: false, currentLife: true }
+    hasVideos: { earlyLife: true, professionalLife: false, currentLife: true },
+    hometown: 'Kanpur',
+    bornIn: '1987',
+    school: 'Kendriya Vidyalaya, Kanpur',
+    college: 'IIM Ahmedabad',
+    interests: ['Finance', 'Cricket', 'Social Impact'],
+    earlyLifeSummary: 'Growing up in a small village near Kanpur, I witnessed firsthand how lack of financial access limited opportunities. This sparked my passion for financial inclusion.'
   },
   {
     id: 'member-005',
@@ -127,7 +151,13 @@ export const members = [
     tags: ['Design', 'UX', 'Consulting'],
     linkedin: 'https://linkedin.com/in/meerapatel',
     instagram: 'https://instagram.com/meera.designs',
-    hasVideos: { earlyLife: false, professionalLife: false, currentLife: false }
+    hasVideos: { earlyLife: false, professionalLife: false, currentLife: false },
+    hometown: 'Ahmedabad',
+    bornIn: '1992',
+    school: 'Gujarat Vidyapith, Ahmedabad',
+    college: 'NID Ahmedabad',
+    interests: ['Design', 'Art', 'Yoga'],
+    earlyLifeSummary: 'Born in Ahmedabad to a family of textile merchants, I was surrounded by colors and patterns from childhood. This influenced my career in design.'
   },
   {
     id: 'member-006',
@@ -149,7 +179,13 @@ export const members = [
     linkedin: 'https://linkedin.com/in/arjunnair',
     twitter: 'https://twitter.com/arjun_logitech',
     contentLinks: ['https://logitech.in/insights'],
-    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true },
+    hometown: 'Kochi',
+    bornIn: '1986',
+    school: 'Loyola School, Kochi',
+    college: ['BITS Pilani', 'MIT Sloan'],
+    interests: ['Logistics', 'Running', 'Science Fiction'],
+    earlyLifeSummary: 'Growing up in Kochi, I was fascinated by the busy port and how goods moved around the world. This curiosity led me to a career in supply chain management.'
   },
   {
     id: 'member-007',
@@ -171,7 +207,13 @@ export const members = [
     linkedin: 'https://linkedin.com/in/snehagupta',
     instagram: 'https://instagram.com/sneha.foodie',
     contentLinks: ['https://foodtechlabs.com/stories'],
-    hasVideos: { earlyLife: true, professionalLife: true, currentLife: false }
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: false },
+    hometown: 'Jaipur',
+    bornIn: '1991',
+    school: 'Mayo College Girls School, Jaipur',
+    college: ['IIM Bangalore'],
+    interests: ['Food', 'Sustainability', 'Trekking'],
+    earlyLifeSummary: 'Born in Jaipur, I grew up in a family that loved food and hospitality. Our home was always filled with guests and the aroma of traditional Rajasthani cuisine.'
   },
   {
     id: 'member-008',
@@ -193,7 +235,13 @@ export const members = [
     linkedin: 'https://linkedin.com/in/karthikrajan',
     twitter: 'https://twitter.com/karthik_space',
     contentLinks: ['https://spacetech.in/research', 'https://youtube.com/spacetechventures'],
-    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true },
+    hometown: 'Trichy',
+    bornIn: '1983',
+    school: 'St. Joseph\'s College, Trichy',
+    college: ['IIT Kharagpur', 'Caltech'],
+    interests: ['Space', 'Physics', 'Agriculture'],
+    earlyLifeSummary: 'Born in Trichy, I was mesmerized by the night sky from an early age. Building model rockets as a child eventually led me to a career at ISRO.'
   }
 ]
 

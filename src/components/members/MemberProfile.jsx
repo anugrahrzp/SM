@@ -229,6 +229,107 @@ function MemberProfile() {
           </div>
         )}
 
+        {/* Early Life Section */}
+        <div className="life-section">
+          <div className="section-header-with-icon">
+            <h3 className="section-title-large">Early Life</h3>
+            <div className="section-icon">
+              <svg width="24" height="24" viewBox="0 0 60 80" fill="none">
+                <circle cx="30" cy="10" r="6" fill="#648349"/>
+                <polygon points="30,20 45,45 15,45" fill="#648349" opacity="0.8"/>
+                <polygon points="30,35 50,65 10,65" fill="#648349" opacity="0.6"/>
+              </svg>
+            </div>
+          </div>
+          <div className="section-divider"></div>
+
+          {/* Video Thumbnail */}
+          {member.hasVideos?.earlyLife && (
+            <div className="life-video">
+              <div className="video-preview">
+                <div className="video-placeholder">
+                  <svg className="play-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                  </svg>
+                </div>
+                <span className="video-duration">1:58</span>
+              </div>
+            </div>
+          )}
+
+          {/* Tags */}
+          <div className="life-tags">
+            {member.hometown && (
+              <Link to={`/members?tag=${encodeURIComponent(member.hometown)}`} className="life-tag">
+                {member.hometown}
+              </Link>
+            )}
+            {member.bornIn && (
+              <Link to={`/members?tag=${encodeURIComponent(member.bornIn)}`} className="life-tag">
+                {member.bornIn}
+              </Link>
+            )}
+            {member.interests?.map((interest, index) => (
+              <Link
+                key={index}
+                to={`/members?tag=${encodeURIComponent(interest)}`}
+                className="life-tag"
+              >
+                {interest}
+              </Link>
+            ))}
+          </div>
+
+          {/* Background Info */}
+          <div className="life-details">
+            {member.hometown && (
+              <div className="life-detail-item">
+                <p className="detail-label">Hometown</p>
+                <Link to={`/members?tag=${encodeURIComponent(member.hometown)}`} className="detail-value">
+                  {member.hometown}
+                </Link>
+              </div>
+            )}
+            {member.bornIn && (
+              <div className="life-detail-item">
+                <p className="detail-label">Born in</p>
+                <Link to={`/members?tag=${encodeURIComponent(member.bornIn)}`} className="detail-value">
+                  {member.bornIn}
+                </Link>
+              </div>
+            )}
+            {member.school && (
+              <div className="life-detail-item">
+                <p className="detail-label">Went to school at</p>
+                <p className="detail-value-text">{member.school}</p>
+              </div>
+            )}
+            {member.college && (
+              <div className="life-detail-item">
+                <p className="detail-label">Went to college at</p>
+                {Array.isArray(member.college) ? (
+                  member.college.map((col, index) => (
+                    <p key={index} className="detail-value-text">{col}</p>
+                  ))
+                ) : (
+                  <p className="detail-value-text">{member.college}</p>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Early Life Summary */}
+          {member.earlyLifeSummary && (
+            <div className="life-summary">
+              <p className="summary-label">Early Life Summary</p>
+              <p className="summary-text">
+                {member.earlyLifeSummary.substring(0, 100)}...
+              </p>
+              <button className="show-more-btn">Show More</button>
+            </div>
+          )}
+        </div>
+
         {/* Videos Section */}
         {member.hasVideos && (member.hasVideos.earlyLife || member.hasVideos.professionalLife || member.hasVideos.currentLife) && (
           <div className="profile-section">
