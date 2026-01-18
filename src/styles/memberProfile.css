@@ -1,0 +1,370 @@
+/* Profile Page */
+.profile-page {
+  padding-bottom: 24px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 16px;
+}
+
+.profile-header .back-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.profile-header .back-btn:hover {
+  background-color: var(--light-gray);
+}
+
+.share-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.share-btn:hover {
+  background-color: var(--light-gray);
+}
+
+/* Profile Hero */
+.profile-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.profile-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.profile-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.profile-name {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.profile-page .status-badge {
+  font-family: var(--font-accent);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.profile-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--medium-gray);
+  margin-bottom: 12px;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-page .tag {
+  font-family: var(--font-accent);
+  font-size: 12px;
+  padding: 6px 12px;
+  background-color: var(--primary-green-light);
+  color: var(--primary-green);
+  border-radius: 5px;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.contact-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.email-btn {
+  background-color: var(--primary-green);
+  border: none;
+  color: white;
+}
+
+.email-btn:hover {
+  background-color: #567339;
+}
+
+.phone-btn {
+  background-color: white;
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
+}
+
+.phone-btn:hover {
+  background-color: var(--primary-green-light);
+}
+
+/* Profile Sections */
+.profile-section {
+  margin-bottom: 24px;
+}
+
+.profile-section .section-title {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+/* Currently Card */
+.currently-card {
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.currently-role {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.currently-org {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--medium-gray);
+}
+
+/* Bio */
+.profile-bio {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+/* Joy Outside Work */
+.profile-joy {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--dark-gray);
+  line-height: 1.5;
+}
+
+/* Quote Card */
+.quote-card {
+  background: linear-gradient(135deg, var(--primary-green-light) 0%, #d4ebc4 100%);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.quote-icon {
+  color: var(--primary-green);
+  opacity: 0.3;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.quote-text {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  padding-left: 24px;
+}
+
+/* Videos Grid */
+.videos-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.video-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.video-thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.video-thumbnail:hover {
+  opacity: 0.8;
+}
+
+.video-label {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: var(--medium-gray);
+  text-align: center;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.social-link.linkedin {
+  background-color: #E8F4F8;
+  color: #0077B5;
+}
+
+.social-link.twitter {
+  background-color: #E8E8E8;
+  color: #000000;
+}
+
+.social-link.instagram {
+  background-color: #FCE4EC;
+  color: #E1306C;
+}
+
+/* Content Links */
+.content-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.content-link:hover {
+  background-color: var(--primary-green-light);
+}
+
+/* Not Found */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.not-found h2 {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+}
+
+.not-found a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+}

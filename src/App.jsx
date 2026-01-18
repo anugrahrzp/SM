@@ -4,6 +4,7 @@ import Signup from './components/Signup'
 import Onboarding from './components/onboarding/Onboarding'
 import Dashboard from './components/dashboard/Dashboard'
 import Members from './components/members/Members'
+import MemberProfile from './components/members/MemberProfile'
 import { OnboardingProvider } from './context/OnboardingContext'
 import './styles/App.css'
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/onboarding" element={<OnboardingWrapper />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/members" element={<Members />} />
+            <Route path="/member/:id" element={<MemberProfile />} />
           </Routes>
         </div>
       </div>

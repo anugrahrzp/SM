@@ -27,9 +27,17 @@ export const members = [
     email: 'priya@techstart.in',
     phone: '+91 98765 43210',
     introduction: 'Building the future of EdTech in India. Former Google engineer turned entrepreneur.',
+    bio: 'I spent 8 years at Google working on search algorithms before taking the leap to start TechStart India. Our mission is to make quality education accessible to every child in India through AI-powered personalized learning. Outside work, I love hiking in the Western Ghats and practicing classical dance.',
+    quote: '"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela',
+    joyOutsideWork: 'Hiking, Classical dance, Reading biographies',
     status: 'super',
     profileCompletion: 100,
-    tags: ['EdTech', 'AI/ML', 'Startup']
+    tags: ['EdTech', 'AI/ML', 'Startup'],
+    twitter: 'https://twitter.com/priyasharma',
+    linkedin: 'https://linkedin.com/in/priyasharma',
+    instagram: 'https://instagram.com/priya.sharma',
+    contentLinks: ['https://medium.com/@priyasharma', 'https://youtube.com/techstartindia'],
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
   },
   {
     id: 'member-002',
@@ -42,9 +50,16 @@ export const members = [
     email: 'rahul@greenenergy.co',
     phone: '+91 98765 43211',
     introduction: 'Climate tech enthusiast. Working on making renewable energy accessible to everyone.',
+    bio: 'After witnessing the impact of air pollution in Delhi, I dedicated my career to clean energy. GreenEnergy Solutions is working on affordable solar solutions for rural India. Previously worked at Tata Power for 5 years.',
+    quote: '"The greatest threat to our planet is the belief that someone else will save it." - Robert Swan',
+    joyOutsideWork: 'Cycling, Bird watching, Organic farming',
     status: 'active',
     profileCompletion: 85,
-    tags: ['CleanTech', 'Sustainability', 'B2B']
+    tags: ['CleanTech', 'Sustainability', 'B2B'],
+    twitter: 'https://twitter.com/rahulverma_green',
+    linkedin: 'https://linkedin.com/in/rahulverma',
+    contentLinks: ['https://greenenergy.co/blog'],
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: false }
   },
   {
     id: 'member-003',
@@ -57,9 +72,16 @@ export const members = [
     email: 'ananya@healthfirst.com',
     phone: '+91 98765 43212',
     introduction: 'Healthcare technology leader with 15 years of experience. Passionate about digital health.',
+    bio: 'My journey in healthcare tech started when my grandmother struggled to get timely medical care in a small town. Now at HealthFirst, we are building telemedicine solutions that connect patients with doctors across India. IIT Madras and Stanford alumna.',
+    quote: '"The good physician treats the disease; the great physician treats the patient." - William Osler',
+    joyOutsideWork: 'Carnatic music, Volunteering at hospitals, Chess',
     status: 'super',
     profileCompletion: 100,
-    tags: ['HealthTech', 'Digital Health', 'SaaS']
+    tags: ['HealthTech', 'Digital Health', 'SaaS'],
+    linkedin: 'https://linkedin.com/in/ananyakrishnan',
+    twitter: 'https://twitter.com/ananya_health',
+    contentLinks: ['https://healthfirst.com/blog', 'https://anchor.fm/healthfirst-podcast'],
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
   },
   {
     id: 'member-004',
@@ -72,9 +94,15 @@ export const members = [
     email: 'vikram@finleap.in',
     phone: '+91 98765 43213',
     introduction: 'Fintech founder focused on financial inclusion. Building banking for the next billion.',
+    bio: 'Growing up in a small village in UP, I saw how lack of banking access held back families. FinLeap is my attempt to change that. We have enabled 2M+ people to access banking services through their local kirana stores.',
+    quote: '"Financial inclusion is not about charity, it is about opportunity." - Self',
+    joyOutsideWork: 'Cricket, Mentoring students, Traveling',
     status: 'active',
     profileCompletion: 90,
-    tags: ['FinTech', 'Payments', 'Inclusion']
+    tags: ['FinTech', 'Payments', 'Inclusion'],
+    linkedin: 'https://linkedin.com/in/vikramsingh',
+    twitter: 'https://twitter.com/vikram_finleap',
+    hasVideos: { earlyLife: true, professionalLife: false, currentLife: true }
   },
   {
     id: 'member-005',
@@ -87,9 +115,15 @@ export const members = [
     email: 'meera@creativeminds.co',
     phone: '+91 98765 43214',
     introduction: 'Design thinking advocate. Helping startups build user-centric products.',
+    bio: 'I believe great design can solve complex problems. At CreativeMinds, we work with early-stage startups to create products that users love. Previously led design at Flipkart.',
+    quote: '"Design is not just what it looks like, design is how it works." - Steve Jobs',
+    joyOutsideWork: 'Pottery, Sketching, Yoga',
     status: 'basic',
     profileCompletion: 45,
-    tags: ['Design', 'UX', 'Consulting']
+    tags: ['Design', 'UX', 'Consulting'],
+    linkedin: 'https://linkedin.com/in/meerapatel',
+    instagram: 'https://instagram.com/meera.designs',
+    hasVideos: { earlyLife: false, professionalLife: false, currentLife: false }
   },
   {
     id: 'member-006',
@@ -102,9 +136,16 @@ export const members = [
     email: 'arjun@logitech.in',
     phone: '+91 98765 43215',
     introduction: 'Supply chain optimization expert. Making logistics smarter with AI.',
+    bio: 'After 10 years in Amazon logistics, I started LogiTech to bring enterprise-grade supply chain solutions to Indian SMEs. Our AI platform has helped 500+ businesses reduce logistics costs by 30%.',
+    quote: '"The supply chain stuff is really tricky." - Elon Musk',
+    joyOutsideWork: 'Marathon running, Reading sci-fi, Coffee brewing',
     status: 'super',
     profileCompletion: 100,
-    tags: ['LogiTech', 'AI', 'Supply Chain']
+    tags: ['LogiTech', 'AI', 'Supply Chain'],
+    linkedin: 'https://linkedin.com/in/arjunnair',
+    twitter: 'https://twitter.com/arjun_logitech',
+    contentLinks: ['https://logitech.in/insights'],
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
   },
   {
     id: 'member-007',
@@ -117,9 +158,16 @@ export const members = [
     email: 'sneha@foodtechlabs.com',
     phone: '+91 98765 43216',
     introduction: 'Revolutionizing food delivery with sustainable practices. Ex-Swiggy product leader.',
+    bio: 'Spent 6 years at Swiggy scaling their product from 10 cities to 500+. Now building FoodTech Labs to make food delivery more sustainable with electric vehicles and plastic-free packaging.',
+    quote: '"Good food is the foundation of genuine happiness." - Auguste Escoffier',
+    joyOutsideWork: 'Cooking, Sustainable living, Trekking',
     status: 'active',
     profileCompletion: 80,
-    tags: ['FoodTech', 'Sustainability', 'D2C']
+    tags: ['FoodTech', 'Sustainability', 'D2C'],
+    linkedin: 'https://linkedin.com/in/snehagupta',
+    instagram: 'https://instagram.com/sneha.foodie',
+    contentLinks: ['https://foodtechlabs.com/stories'],
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: false }
   },
   {
     id: 'member-008',
@@ -132,9 +180,16 @@ export const members = [
     email: 'karthik@spacetech.in',
     phone: '+91 98765 43217',
     introduction: 'Building satellite technology for agricultural insights. ISRO alumni.',
+    bio: 'Worked at ISRO for 12 years on satellite communication systems. Now using that expertise at SpaceTech Ventures to help Indian farmers with satellite-based crop monitoring and weather prediction.',
+    quote: '"The Earth is the cradle of humanity, but mankind cannot stay in the cradle forever." - Konstantin Tsiolkovsky',
+    joyOutsideWork: 'Stargazing, Teaching physics, Model rockets',
     status: 'super',
     profileCompletion: 95,
-    tags: ['SpaceTech', 'AgriTech', 'Deep Tech']
+    tags: ['SpaceTech', 'AgriTech', 'Deep Tech'],
+    linkedin: 'https://linkedin.com/in/karthikrajan',
+    twitter: 'https://twitter.com/karthik_space',
+    contentLinks: ['https://spacetech.in/research', 'https://youtube.com/spacetechventures'],
+    hasVideos: { earlyLife: true, professionalLife: true, currentLife: true }
   }
 ]
 
