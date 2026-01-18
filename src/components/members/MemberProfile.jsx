@@ -212,23 +212,6 @@ function MemberProfile() {
           </div>
         )}
 
-        {/* Joy Card - Orange */}
-        {member.joyOutsideWork && (
-          <div className="colored-card joy-card-orange">
-            <div className="card-content">
-              <p className="card-label">What fills me with joy</p>
-              <p className="card-text">{member.joyOutsideWork}</p>
-            </div>
-            <div className="card-decoration">
-              <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
-                <circle cx="45" cy="10" r="8" fill="rgba(255,255,255,0.3)"/>
-                <polygon points="30,25 50,55 10,55" fill="rgba(255,255,255,0.25)"/>
-                <polygon points="30,40 55,75 5,75" fill="rgba(255,255,255,0.2)"/>
-              </svg>
-            </div>
-          </div>
-        )}
-
         {/* Early Life Section */}
         <div className="life-section">
           <div className="section-header-with-icon">
@@ -418,6 +401,23 @@ function MemberProfile() {
             </div>
           )}
         </div>
+
+        {/* Joy Card - Orange */}
+        {member.joyOutsideWork && (
+          <div className="colored-card joy-card-orange">
+            <div className="card-content">
+              <p className="card-label">What fills me with joy</p>
+              <p className="card-text">{member.joyOutsideWork}</p>
+            </div>
+            <div className="card-decoration">
+              <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                <circle cx="45" cy="10" r="8" fill="rgba(255,255,255,0.3)"/>
+                <polygon points="30,25 50,55 10,55" fill="rgba(255,255,255,0.25)"/>
+                <polygon points="30,40 55,75 5,75" fill="rgba(255,255,255,0.2)"/>
+              </svg>
+            </div>
+          </div>
+        )}
 
         {/* Videos Section */}
         {member.hasVideos && (member.hasVideos.earlyLife || member.hasVideos.professionalLife || member.hasVideos.currentLife) && (
