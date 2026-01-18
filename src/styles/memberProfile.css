@@ -125,6 +125,21 @@
   background-color: var(--primary-green-light);
   color: var(--primary-green);
   border-radius: 5px;
+  text-decoration: none;
+}
+
+.profile-page .tag.tag-clickable {
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.profile-page .tag.tag-clickable:hover {
+  background-color: #d4ebc4;
+  transform: scale(1.05);
+}
+
+.profile-page .tag.tag-clickable:active {
+  transform: scale(0.98);
 }
 
 /* Contact Buttons */

@@ -1,14 +1,23 @@
-import { useState, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useMemo, useEffect } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import StatusBar from '../StatusBar'
 import MemberCard from './MemberCard'
 import { members, stats } from '../../data/mockData'
 import '../../styles/members.css'
 
 function Members() {
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const tagFilter = searchParams.get('tag')
+  const [searchQuery, setSearchQuery] = useState(tagFilter || '')
   const [sortBy, setSortBy] = useState('completion')
   const [showSortDropdown, setShowSortDropdown] = useState(false)
+
+  // Update search query when tag filter changes from URL
+  useEffect(() => {
+    if (tagFilter) {
+      setSearchQuery(tagFilter)
+    }
+  }, [tagFilter])
 
   const sortOptions = [
     { value: 'completion', label: 'Profile Completion (High → Low)' },
@@ -90,7 +99,10 @@ function Members() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             {searchQuery && (
-              <button className="clear-search" onClick={() => setSearchQuery('')}>
+              <button className="clear-search" onClick={() => {
+                setSearchQuery('')
+                setSearchParams({}) // Clear URL params too
+              }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="18" y1="6" x2="6" y2="18"/>
                   <line x1="6" y1="6" x2="18" y2="18"/>
@@ -100,10 +112,30 @@ function Members() {
           </div>
         </div>
 
+        {/* Tag Filter Badge */}
+        {tagFilter && (
+          <div className="tag-filter-badge">
+            <span>Filtering by tag:</span>
+            <span className="tag-badge">{tagFilter}</span>
+            <button
+              className="clear-tag-btn"
+              onClick={() => {
+                setSearchQuery('')
+                setSearchParams({})
+              }}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        )}
+
         {/* Sort and Count Row */}
         <div className="members-toolbar">
           <span className="members-count">
-            All members ({filteredAndSortedMembers.length})
+            {tagFilter ? `Members with "${tagFilter}"` : 'All members'} ({filteredAndSortedMembers.length})
           </span>
 
           <div className="sort-dropdown-container">
@@ -153,7 +185,10 @@ function Members() {
                 <line x1="21" y1="21" x2="16.65" y2="16.65"/>
               </svg>
               <p>No members found matching "{searchQuery}"</p>
-              <button className="clear-search-btn" onClick={() => setSearchQuery('')}>
+              <button className="clear-search-btn" onClick={() => {
+                setSearchQuery('')
+                setSearchParams({})
+              }}>
                 Clear search
               </button>
             </div>

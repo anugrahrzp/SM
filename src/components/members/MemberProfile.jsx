@@ -119,7 +119,13 @@ function MemberProfile() {
           {member.tags && member.tags.length > 0 && (
             <div className="profile-tags">
               {member.tags.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
+                <Link
+                  key={index}
+                  to={`/members?tag=${encodeURIComponent(tag)}`}
+                  className="tag tag-clickable"
+                >
+                  {tag}
+                </Link>
               ))}
             </div>
           )}

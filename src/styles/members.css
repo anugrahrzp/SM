@@ -87,6 +87,52 @@
   margin-left: 8px;
 }
 
+/* Tag Filter Badge */
+.tag-filter-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background-color: var(--primary-green-light);
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.tag-filter-badge span:first-child {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+}
+
+.tag-filter-badge .tag-badge {
+  font-family: var(--font-accent);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-green);
+  background-color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.tag-filter-badge .clear-tag-btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-green);
+  cursor: pointer;
+  margin-left: auto;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.tag-filter-badge .clear-tag-btn:hover {
+  background-color: rgba(100, 131, 73, 0.15);
+}
+
 /* Toolbar */
 .members-toolbar {
   display: flex;
