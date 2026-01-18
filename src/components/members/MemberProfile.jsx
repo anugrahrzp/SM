@@ -1,5 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import StatusBar from '../StatusBar'
+import Sidebar from '../Sidebar'
 import { members } from '../../data/mockData'
 import '../../styles/memberProfile.css'
 
@@ -63,6 +64,7 @@ function MemberProfile() {
   return (
     <>
       <StatusBar />
+      <Sidebar />
       <div className="page-content profile-page">
         {/* Top Bar - Status Badge + Profile Link */}
         <div className="profile-top-bar">

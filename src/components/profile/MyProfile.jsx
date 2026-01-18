@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import StatusBar from '../StatusBar'
+import Sidebar from '../Sidebar'
 import { currentUser } from '../../data/mockData'
 import '../../styles/myProfile.css'
 import '../../styles/memberProfile.css'
@@ -118,6 +119,7 @@ function MyProfile() {
   return (
     <>
       <StatusBar />
+      <Sidebar />
       <div className="page-content my-profile-page">
         {/* Header */}
         <div className="my-profile-header">

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import StatusBar from '../StatusBar'
+import Sidebar from '../Sidebar'
 import { currentUser, newMembers, events, stats } from '../../data/mockData'
 import '../../styles/dashboard.css'
 
@@ -19,6 +20,7 @@ function Dashboard() {
   return (
     <>
       <StatusBar />
+      <Sidebar />
       <div className="page-content dashboard-page">
         {/* Header */}
         <div className="dashboard-header">

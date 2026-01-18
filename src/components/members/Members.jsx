@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import StatusBar from '../StatusBar'
+import Sidebar from '../Sidebar'
 import MemberCard from './MemberCard'
 import { members, stats } from '../../data/mockData'
 import '../../styles/members.css'
@@ -72,6 +73,7 @@ function Members() {
   return (
     <>
       <StatusBar />
+      <Sidebar />
       <div className="page-content members-page">
         {/* Header */}
         <div className="members-header">
