@@ -36,13 +36,13 @@ function Dashboard() {
               </svg>
               <span className="notification-badge">3</span>
             </button>
-            <div className="user-avatar-small">
+            <Link to="/profile" className="user-avatar-small">
               {currentUser.profilePicture ? (
                 <img src={currentUser.profilePicture} alt={currentUser.firstName} />
               ) : (
                 <span>{getInitials(currentUser.firstName, currentUser.lastName)}</span>
               )}
-            </div>
+            </Link>
           </div>
         </div>
 

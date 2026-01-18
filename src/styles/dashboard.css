@@ -79,6 +79,14 @@
   font-size: 14px;
   font-weight: 600;
   overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-avatar-small:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .user-avatar-small img {
