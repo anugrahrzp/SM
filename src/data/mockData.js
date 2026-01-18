@@ -28,6 +28,7 @@ export const members = [
     phone: '+91 98765 43210',
     introduction: 'Building the future of EdTech in India. Former Google engineer turned entrepreneur.',
     status: 'super',
+    profileCompletion: 100,
     tags: ['EdTech', 'AI/ML', 'Startup']
   },
   {
@@ -42,6 +43,7 @@ export const members = [
     phone: '+91 98765 43211',
     introduction: 'Climate tech enthusiast. Working on making renewable energy accessible to everyone.',
     status: 'active',
+    profileCompletion: 85,
     tags: ['CleanTech', 'Sustainability', 'B2B']
   },
   {
@@ -56,6 +58,7 @@ export const members = [
     phone: '+91 98765 43212',
     introduction: 'Healthcare technology leader with 15 years of experience. Passionate about digital health.',
     status: 'super',
+    profileCompletion: 100,
     tags: ['HealthTech', 'Digital Health', 'SaaS']
   },
   {
@@ -70,6 +73,7 @@ export const members = [
     phone: '+91 98765 43213',
     introduction: 'Fintech founder focused on financial inclusion. Building banking for the next billion.',
     status: 'active',
+    profileCompletion: 90,
     tags: ['FinTech', 'Payments', 'Inclusion']
   },
   {
@@ -84,6 +88,7 @@ export const members = [
     phone: '+91 98765 43214',
     introduction: 'Design thinking advocate. Helping startups build user-centric products.',
     status: 'basic',
+    profileCompletion: 45,
     tags: ['Design', 'UX', 'Consulting']
   },
   {
@@ -98,7 +103,38 @@ export const members = [
     phone: '+91 98765 43215',
     introduction: 'Supply chain optimization expert. Making logistics smarter with AI.',
     status: 'super',
+    profileCompletion: 100,
     tags: ['LogiTech', 'AI', 'Supply Chain']
+  },
+  {
+    id: 'member-007',
+    firstName: 'Sneha',
+    lastName: 'Gupta',
+    profilePicture: null,
+    currentOrganization: 'FoodTech Labs',
+    currentRole: 'Founder',
+    livesIn: 'Bengaluru, India',
+    email: 'sneha@foodtechlabs.com',
+    phone: '+91 98765 43216',
+    introduction: 'Revolutionizing food delivery with sustainable practices. Ex-Swiggy product leader.',
+    status: 'active',
+    profileCompletion: 80,
+    tags: ['FoodTech', 'Sustainability', 'D2C']
+  },
+  {
+    id: 'member-008',
+    firstName: 'Karthik',
+    lastName: 'Rajan',
+    profilePicture: null,
+    currentOrganization: 'SpaceTech Ventures',
+    currentRole: 'CTO',
+    livesIn: 'Chennai, India',
+    email: 'karthik@spacetech.in',
+    phone: '+91 98765 43217',
+    introduction: 'Building satellite technology for agricultural insights. ISRO alumni.',
+    status: 'super',
+    profileCompletion: 95,
+    tags: ['SpaceTech', 'AgriTech', 'Deep Tech']
   }
 ]
 
