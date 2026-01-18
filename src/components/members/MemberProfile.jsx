@@ -330,6 +330,95 @@ function MemberProfile() {
           )}
         </div>
 
+        {/* Professional Life Section */}
+        <div className="life-section">
+          <div className="section-header-with-icon">
+            <h3 className="section-title-large">Professional Life</h3>
+            <div className="section-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#648349" strokeWidth="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+          </div>
+          <div className="section-divider"></div>
+
+          {/* Video Thumbnail */}
+          {member.hasVideos?.professionalLife && (
+            <div className="life-video">
+              <div className="video-preview">
+                <div className="video-placeholder">
+                  <svg className="play-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                  </svg>
+                </div>
+                <span className="video-duration">2:45</span>
+              </div>
+            </div>
+          )}
+
+          {/* Tags */}
+          <div className="life-tags">
+            {member.tags?.map((tag, index) => (
+              <Link
+                key={index}
+                to={`/members?tag=${encodeURIComponent(tag)}`}
+                className="life-tag"
+              >
+                {tag}
+              </Link>
+            ))}
+            {member.industry && (
+              <Link to={`/members?tag=${encodeURIComponent(member.industry)}`} className="life-tag">
+                {member.industry}
+              </Link>
+            )}
+          </div>
+
+          {/* Professional Details */}
+          <div className="life-details">
+            {member.previousCompanies && member.previousCompanies.length > 0 && (
+              <div className="life-detail-item">
+                <p className="detail-label">Previous Companies</p>
+                {member.previousCompanies.map((company, index) => (
+                  <p key={index} className="detail-value-text">{company}</p>
+                ))}
+              </div>
+            )}
+            {member.yearsOfExperience && (
+              <div className="life-detail-item">
+                <p className="detail-label">Years of Experience</p>
+                <p className="detail-value-text">{member.yearsOfExperience} years</p>
+              </div>
+            )}
+            {member.industry && (
+              <div className="life-detail-item">
+                <p className="detail-label">Industry</p>
+                <Link to={`/members?tag=${encodeURIComponent(member.industry)}`} className="detail-value">
+                  {member.industry}
+                </Link>
+              </div>
+            )}
+            {member.expertise && member.expertise.length > 0 && (
+              <div className="life-detail-item">
+                <p className="detail-label">Areas of Expertise</p>
+                <p className="detail-value-text">{member.expertise.join(', ')}</p>
+              </div>
+            )}
+          </div>
+
+          {/* Professional Life Summary */}
+          {member.professionalLifeSummary && (
+            <div className="life-summary">
+              <p className="summary-label">Professional Life Summary</p>
+              <p className="summary-text">
+                {member.professionalLifeSummary.substring(0, 100)}...
+              </p>
+              <button className="show-more-btn">Show More</button>
+            </div>
+          )}
+        </div>
+
         {/* Videos Section */}
         {member.hasVideos && (member.hasVideos.earlyLife || member.hasVideos.professionalLife || member.hasVideos.currentLife) && (
           <div className="profile-section">

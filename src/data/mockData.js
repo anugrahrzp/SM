@@ -46,7 +46,12 @@ export const members = [
     school: 'Bishop Cotton School, Pune',
     college: ['IIT Bombay', 'Stanford University'],
     interests: ['Technology', 'Education', 'Dance'],
-    earlyLifeSummary: 'Growing up in Pune, I was always fascinated by computers and technology. My father was a professor and instilled in me a love for learning from an early age.'
+    earlyLifeSummary: 'Growing up in Pune, I was always fascinated by computers and technology. My father was a professor and instilled in me a love for learning from an early age.',
+    previousCompanies: ['Google', 'Microsoft'],
+    yearsOfExperience: 12,
+    industry: 'Education Technology',
+    expertise: ['Search Algorithms', 'Machine Learning', 'Product Management'],
+    professionalLifeSummary: 'My professional journey started at Microsoft as a software engineer before moving to Google where I spent 8 years working on search algorithms and AI-powered tools.'
   },
   {
     id: 'member-002',
@@ -75,7 +80,12 @@ export const members = [
     school: 'La Martiniere College, Lucknow',
     college: ['IIT Delhi', 'IESE Business School'],
     interests: ['Environment', 'Cycling', 'Sustainability'],
-    earlyLifeSummary: 'Born in Lucknow, I spent my childhood exploring the countryside. The smog in Delhi during my college years motivated me to work on clean energy solutions.'
+    earlyLifeSummary: 'Born in Lucknow, I spent my childhood exploring the countryside. The smog in Delhi during my college years motivated me to work on clean energy solutions.',
+    previousCompanies: ['Tata Power', 'Suzlon Energy'],
+    yearsOfExperience: 10,
+    industry: 'Clean Energy',
+    expertise: ['Solar Energy', 'Renewable Infrastructure', 'Policy'],
+    professionalLifeSummary: 'After graduating from IIT Delhi, I joined Tata Power where I led multiple renewable energy projects. My 5 years there gave me deep insights into India\'s energy landscape.'
   },
   {
     id: 'member-003',
@@ -103,7 +113,12 @@ export const members = [
     school: 'PSBB School, Chennai',
     college: ['IIT Madras', 'Stanford University'],
     interests: ['Healthcare', 'Music', 'Chess'],
-    earlyLifeSummary: 'Born in Coimbatore to a family of doctors, I grew up surrounded by discussions about patient care. My grandmother\'s struggle to access healthcare shaped my career path.'
+    earlyLifeSummary: 'Born in Coimbatore to a family of doctors, I grew up surrounded by discussions about patient care. My grandmother\'s struggle to access healthcare shaped my career path.',
+    previousCompanies: ['Philips Healthcare', 'GE Healthcare'],
+    yearsOfExperience: 15,
+    industry: 'Healthcare Technology',
+    expertise: ['Telemedicine', 'Health Informatics', 'Medical Devices'],
+    professionalLifeSummary: 'Started my career at GE Healthcare building medical imaging software. Later moved to Philips where I led their telemedicine initiative for emerging markets.'
   },
   {
     id: 'member-004',
@@ -130,7 +145,12 @@ export const members = [
     school: 'Kendriya Vidyalaya, Kanpur',
     college: 'IIM Ahmedabad',
     interests: ['Finance', 'Cricket', 'Social Impact'],
-    earlyLifeSummary: 'Growing up in a small village near Kanpur, I witnessed firsthand how lack of financial access limited opportunities. This sparked my passion for financial inclusion.'
+    earlyLifeSummary: 'Growing up in a small village near Kanpur, I witnessed firsthand how lack of financial access limited opportunities. This sparked my passion for financial inclusion.',
+    previousCompanies: ['ICICI Bank', 'Paytm'],
+    yearsOfExperience: 11,
+    industry: 'Financial Services',
+    expertise: ['Digital Payments', 'Financial Inclusion', 'Rural Banking'],
+    professionalLifeSummary: 'My banking career started at ICICI where I worked on rural banking initiatives. Later joined Paytm to scale their merchant payment solutions across tier-2 and tier-3 cities.'
   },
   {
     id: 'member-005',
@@ -157,7 +177,12 @@ export const members = [
     school: 'Gujarat Vidyapith, Ahmedabad',
     college: 'NID Ahmedabad',
     interests: ['Design', 'Art', 'Yoga'],
-    earlyLifeSummary: 'Born in Ahmedabad to a family of textile merchants, I was surrounded by colors and patterns from childhood. This influenced my career in design.'
+    earlyLifeSummary: 'Born in Ahmedabad to a family of textile merchants, I was surrounded by colors and patterns from childhood. This influenced my career in design.',
+    previousCompanies: ['Flipkart', 'Myntra'],
+    yearsOfExperience: 8,
+    industry: 'Design & Consulting',
+    expertise: ['UX Design', 'Design Thinking', 'Brand Strategy'],
+    professionalLifeSummary: 'Started as a junior designer at Myntra before moving to Flipkart where I led the design team for their mobile app. My work there reached millions of users daily.'
   },
   {
     id: 'member-006',
@@ -185,7 +210,12 @@ export const members = [
     school: 'Loyola School, Kochi',
     college: ['BITS Pilani', 'MIT Sloan'],
     interests: ['Logistics', 'Running', 'Science Fiction'],
-    earlyLifeSummary: 'Growing up in Kochi, I was fascinated by the busy port and how goods moved around the world. This curiosity led me to a career in supply chain management.'
+    earlyLifeSummary: 'Growing up in Kochi, I was fascinated by the busy port and how goods moved around the world. This curiosity led me to a career in supply chain management.',
+    previousCompanies: ['Amazon', 'DHL'],
+    yearsOfExperience: 14,
+    industry: 'Supply Chain & Logistics',
+    expertise: ['Supply Chain Optimization', 'AI/ML', 'Operations'],
+    professionalLifeSummary: 'My logistics career began at DHL managing their South India operations. Joined Amazon in 2014 where I led their last-mile delivery innovation team for 10 years.'
   },
   {
     id: 'member-007',
@@ -213,7 +243,12 @@ export const members = [
     school: 'Mayo College Girls School, Jaipur',
     college: ['IIM Bangalore'],
     interests: ['Food', 'Sustainability', 'Trekking'],
-    earlyLifeSummary: 'Born in Jaipur, I grew up in a family that loved food and hospitality. Our home was always filled with guests and the aroma of traditional Rajasthani cuisine.'
+    earlyLifeSummary: 'Born in Jaipur, I grew up in a family that loved food and hospitality. Our home was always filled with guests and the aroma of traditional Rajasthani cuisine.',
+    previousCompanies: ['Swiggy', 'Zomato'],
+    yearsOfExperience: 9,
+    industry: 'Food Technology',
+    expertise: ['Product Management', 'Marketplace Dynamics', 'Sustainability'],
+    professionalLifeSummary: 'Started at Zomato in their early days before moving to Swiggy where I spent 6 years scaling their product from 10 cities to 500+. Led their sustainability initiatives.'
   },
   {
     id: 'member-008',
@@ -241,7 +276,12 @@ export const members = [
     school: 'St. Joseph\'s College, Trichy',
     college: ['IIT Kharagpur', 'Caltech'],
     interests: ['Space', 'Physics', 'Agriculture'],
-    earlyLifeSummary: 'Born in Trichy, I was mesmerized by the night sky from an early age. Building model rockets as a child eventually led me to a career at ISRO.'
+    earlyLifeSummary: 'Born in Trichy, I was mesmerized by the night sky from an early age. Building model rockets as a child eventually led me to a career at ISRO.',
+    previousCompanies: ['ISRO', 'NASA JPL'],
+    yearsOfExperience: 18,
+    industry: 'Space Technology',
+    expertise: ['Satellite Communications', 'Remote Sensing', 'Agricultural Tech'],
+    professionalLifeSummary: 'Spent 12 years at ISRO working on satellite communication systems, including the GSAT series. Brief stint at NASA JPL working on Mars mission communications.'
   }
 ]
 
