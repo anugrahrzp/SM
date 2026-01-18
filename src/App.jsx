@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Onboarding from './components/onboarding/Onboarding'
@@ -16,7 +16,7 @@ function OnboardingWrapper() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app-container">
         <div className="mobile-frame">
           <Routes>
@@ -27,7 +27,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
