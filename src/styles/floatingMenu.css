@@ -1,126 +1,78 @@
-/* Floating Menu */
-.floating-menu {
+/* Floating Dock Navigation */
+.floating-dock {
   position: absolute;
-  bottom: 24px;
-  right: 16px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #1a1a1a;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
 
-/* Toggle Button */
-.floating-menu-toggle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--primary-green);
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(100, 131, 73, 0.4);
-  transition: transform 0.2s, background-color 0.2s;
-  position: relative;
-  z-index: 1002;
-}
-
-.floating-menu-toggle:hover {
-  background-color: #567339;
-}
-
-.floating-menu-toggle:active {
-  transform: scale(0.95);
-}
-
-.floating-menu.open .floating-menu-toggle {
-  background-color: var(--dark-gray);
-}
-
-/* Menu Items Container */
-.floating-menu-items {
-  position: absolute;
-  bottom: 70px;
-  right: 0;
+/* Individual Dock Item */
+.dock-item {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-  z-index: 1003;
-}
-
-.floating-menu.open .floating-menu-items {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Individual Menu Item */
-.floating-menu-item {
-  display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  background-color: white;
-  border-radius: 28px;
+  gap: 4px;
+  padding: 10px 16px;
+  border-radius: 24px;
   text-decoration: none;
-  color: var(--dark-gray);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
+  color: #888;
+  transition: all 0.2s ease;
 }
 
-.floating-menu.open .floating-menu-item {
-  opacity: 1;
-  transform: translateY(0);
+.dock-item:hover {
+  color: #aaa;
 }
 
-.floating-menu-item:hover {
-  background-color: var(--light-gray);
-}
-
-.floating-menu-item.active {
+/* Active State */
+.dock-item.active {
   background-color: var(--primary-green);
   color: white;
 }
 
-.floating-menu-item.active:hover {
-  background-color: #567339;
-}
-
-.floating-menu-item.active svg {
+.dock-item.active .dock-icon svg {
   stroke: white;
 }
 
-.floating-menu-item span {
-  font-family: var(--font-secondary);
-  font-size: 14px;
-  font-weight: 500;
+/* Icon */
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.floating-menu-item svg {
-  flex-shrink: 0;
+.dock-icon svg {
+  width: 22px;
+  height: 22px;
   stroke: currentColor;
 }
 
-/* Backdrop */
-.floating-menu-backdrop {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 390px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1001;
+/* Label */
+.dock-label {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
+/* Responsive */
 @media (max-width: 430px) {
-  .floating-menu-backdrop {
-    width: 100%;
-    left: 0;
+  .floating-dock {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
     transform: none;
+    justify-content: space-around;
+  }
+
+  .dock-item {
+    padding: 10px 12px;
   }
 }
