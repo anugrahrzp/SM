@@ -584,8 +584,6 @@ function MemberProfile() {
           </div>
         </div>
 
-        <FloatingMenu />
-
         {/* Content Links */}
         {member.contentLinks && member.contentLinks.length > 0 && (
           <div className="profile-section">
@@ -608,6 +606,7 @@ function MemberProfile() {
         {/* Spacer for scrolling */}
         <div style={{ height: '24px' }}></div>
       </div>
+      <FloatingMenu />
     </>
   )
 }

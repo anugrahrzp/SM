@@ -562,8 +562,8 @@ function MyProfile() {
           </button>
         )}
 
-        <FloatingMenu />
       </div>
+      <FloatingMenu />
     </>
   )
 }

@@ -151,8 +151,8 @@ function Dashboard() {
           </div>
         </div>
 
-        <FloatingMenu />
       </div>
+      <FloatingMenu />
     </>
   )
 }

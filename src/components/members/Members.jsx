@@ -290,8 +290,8 @@ function Members() {
           </>
         )}
 
-        <FloatingMenu />
       </div>
+      <FloatingMenu />
     </>
   )
 }

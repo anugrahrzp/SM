@@ -210,8 +210,8 @@ function BusinessProfile() {
           </div>
         </div>
 
-        <FloatingMenu />
       </div>
+      <FloatingMenu />
     </>
   )
 }
