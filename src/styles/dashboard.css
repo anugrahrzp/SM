@@ -898,6 +898,14 @@
   background-color: var(--light-gray);
 }
 
+.results-page-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
 .query-display {
   background-color: #f8f9fa;
   border-radius: 12px;
