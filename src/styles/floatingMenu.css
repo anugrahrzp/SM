@@ -155,8 +155,9 @@
   left: auto;
   transform: none;
   flex-direction: column;
-  padding: 8px;
-  gap: 4px;
+  padding: 6px;
+  gap: 2px;
+  border-radius: 30px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px) scale(0.9);
@@ -173,15 +174,8 @@
 }
 
 .floating-dock.floating-dock-expandable .dock-item {
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 12px;
-  padding: 12px 16px;
-  border-radius: 12px;
-}
-
-.floating-dock.floating-dock-expandable .dock-label {
-  font-size: 14px;
+  padding: 12px;
+  border-radius: 50%;
 }
 
 /* Responsive */

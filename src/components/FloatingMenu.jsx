@@ -77,9 +77,9 @@ function FloatingMenu() {
               to={item.path}
               className={`dock-item ${isActive(item.path) ? 'active' : ''}`}
               onClick={() => setIsOpen(false)}
+              title={item.label}
             >
               <span className="dock-icon">{item.icon}</span>
-              <span className="dock-label">{item.label}</span>
             </Link>
           ))}
         </nav>
