@@ -1,14 +1,57 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import '../styles/floatingMenu.css'
 
 function FloatingMenu() {
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
+  const [isAtBottom, setIsAtBottom] = useState(false)
 
   // Check if we're on a detail page (member or business)
   const isDetailPage = location.pathname.startsWith('/member/') ||
                        location.pathname.startsWith('/business/')
+
+  // Check if we're on the community/members page
+  const isCommunityPage = location.pathname === '/members'
+
+  // Scroll detection for community page
+  useEffect(() => {
+    if (!isCommunityPage) {
+      setIsAtBottom(false)
+      return
+    }
+
+    const handleScroll = () => {
+      const pageContent = document.querySelector('.page-content')
+      if (!pageContent) return
+
+      const scrollTop = pageContent.scrollTop
+      const scrollHeight = pageContent.scrollHeight
+      const clientHeight = pageContent.clientHeight
+
+      // Check if near bottom (within 150px)
+      const nearBottom = scrollTop + clientHeight >= scrollHeight - 150
+      setIsAtBottom(nearBottom)
+    }
+
+    const pageContent = document.querySelector('.page-content')
+    if (pageContent) {
+      pageContent.addEventListener('scroll', handleScroll)
+      // Check initial state
+      handleScroll()
+    }
+
+    return () => {
+      if (pageContent) {
+        pageContent.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [isCommunityPage, location.pathname])
+
+  // Reset isOpen when switching pages
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location.pathname])
 
   const isActive = (path) => {
     if (path === '/dashboard') {
@@ -60,8 +103,10 @@ function FloatingMenu() {
     }
   ]
 
-  // On detail pages, show hamburger menu
-  if (isDetailPage) {
+  // Show hamburger menu on detail pages OR when at bottom of community page
+  const showHamburgerMenu = isDetailPage || (isCommunityPage && isAtBottom)
+
+  if (showHamburgerMenu) {
     return (
       <div className="floating-menu-container">
         {/* Backdrop */}
