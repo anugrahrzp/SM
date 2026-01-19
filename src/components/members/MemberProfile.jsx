@@ -149,17 +149,16 @@ function MemberProfile() {
 
               {/* Product catalogue for product businesses */}
               {(member.business.type === 'product' || member.business.type === 'both') && member.business.offerings && (
-                <div className="business-offerings">
+                <div className="business-services-list">
                   <h4 className="offerings-title">
                     {member.business.type === 'both' ? 'Products & Services' : 'Product Catalogue'}
                   </h4>
                   {member.business.offerings.map((offering, index) => (
-                    <div key={index} className="offering-item">
-                      <span className="offering-name">{offering.name}</span>
-                      <div className="offering-prices">
-                        <span className="regular-price">{offering.regularPrice}</span>
-                        <span className="member-price">{offering.memberPrice}</span>
-                      </div>
+                    <div key={index} className="service-list-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span>{offering.name}</span>
                     </div>
                   ))}
                 </div>
