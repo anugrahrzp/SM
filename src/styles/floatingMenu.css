@@ -1,3 +1,13 @@
+/* Floating Menu Wrapper */
+.floating-menu-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
 /* Floating Dock Navigation */
 .floating-dock {
   position: absolute;
@@ -11,7 +21,8 @@
   background-color: #1a1a1a;
   border-radius: 50px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  pointer-events: auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Individual Dock Item */
@@ -24,7 +35,7 @@
   border-radius: 24px;
   text-decoration: none;
   color: #888;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dock-item:hover {
@@ -46,12 +57,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dock-icon svg {
   width: 22px;
   height: 22px;
   stroke: currentColor;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Label */
@@ -60,34 +73,17 @@
   font-size: 11px;
   font-weight: 500;
   white-space: nowrap;
+  max-height: 20px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ==========================================
-   Detail Page - Hamburger Menu Styles
+   Collapsed State - Hamburger Menu
    ========================================== */
 
-.floating-menu-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-/* Backdrop */
-.menu-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  pointer-events: auto;
-}
-
-/* Hamburger Button - Bottom Right */
+/* Hamburger Button - Hidden by default */
 .hamburger-btn {
   position: absolute;
   bottom: 20px;
@@ -107,7 +103,10 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   z-index: 1002;
   pointer-events: auto;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger-btn:hover {
@@ -147,38 +146,75 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Expandable Dock for Detail Pages */
-.floating-dock.floating-dock-expandable {
-  position: absolute;
-  bottom: 80px;
-  right: 16px;
-  left: auto;
+/* Backdrop */
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==========================================
+   Collapsed State Styles
+   ========================================== */
+
+/* Show hamburger button when collapsed */
+.floating-menu-wrapper.collapsed .hamburger-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Hide dock when collapsed (but not when open) */
+.floating-menu-wrapper.collapsed .floating-dock {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) scale(0.8);
+  pointer-events: none;
+}
+
+/* Collapsed dock positioning - appears above hamburger */
+.floating-menu-wrapper.collapsed .floating-dock.dock-open {
+  opacity: 1;
+  visibility: visible;
   transform: none;
+  pointer-events: auto;
+  left: auto;
+  right: 16px;
+  bottom: 80px;
   flex-direction: column;
   padding: 6px;
   gap: 2px;
   border-radius: 30px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px) scale(0.9);
-  transform-origin: bottom right;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.floating-dock.floating-dock-expandable.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-.floating-dock.floating-dock-expandable .dock-item {
+/* Collapsed dock items */
+.floating-menu-wrapper.collapsed .floating-dock.dock-open .dock-item {
   padding: 12px;
   border-radius: 50%;
 }
 
-/* Responsive */
+/* Hide labels when collapsed */
+.floating-menu-wrapper.collapsed .floating-dock .dock-label {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+/* ==========================================
+   Responsive
+   ========================================== */
+
 @media (max-width: 430px) {
   .floating-dock {
     bottom: 16px;
@@ -197,8 +233,13 @@
     right: 16px;
   }
 
-  .floating-dock.floating-dock-expandable {
+  .floating-menu-wrapper.collapsed .floating-dock {
+    transform: scale(0.8);
+  }
+
+  .floating-menu-wrapper.collapsed .floating-dock.dock-open {
     bottom: 76px;
     right: 16px;
+    transform: none;
   }
 }
