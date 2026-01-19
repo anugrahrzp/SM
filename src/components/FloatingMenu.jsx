@@ -1,19 +1,53 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import '../styles/floatingMenu.css'
 
 function FloatingMenu() {
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+  const lastScrollTop = useRef(0)
 
   // Check if we're on a detail page (member or business)
   const isDetailPage = location.pathname.startsWith('/member/') ||
                        location.pathname.startsWith('/business/')
 
-  // Reset isOpen when switching pages
+  // Check if we're on the Community page
+  const isCommunityPage = location.pathname === '/members'
+
+  // Reset states when switching pages
   useEffect(() => {
     setIsOpen(false)
+    setIsCollapsed(false)
   }, [location.pathname])
+
+  // Scroll detection for Community page
+  useEffect(() => {
+    if (!isCommunityPage) return
+
+    const pageContent = document.querySelector('.page-content')
+    if (!pageContent) return
+
+    const handleScroll = () => {
+      const scrollTop = pageContent.scrollTop
+      const scrollHeight = pageContent.scrollHeight
+      const clientHeight = pageContent.clientHeight
+      const distanceFromBottom = scrollHeight - scrollTop - clientHeight
+
+      // Collapse when near bottom (within 50px)
+      if (distanceFromBottom < 50) {
+        setIsCollapsed(true)
+      } else if (scrollTop < lastScrollTop.current && distanceFromBottom > 100) {
+        // Expand when scrolling up and not near bottom
+        setIsCollapsed(false)
+      }
+
+      lastScrollTop.current = scrollTop
+    }
+
+    pageContent.addEventListener('scroll', handleScroll)
+    return () => pageContent.removeEventListener('scroll', handleScroll)
+  }, [isCommunityPage])
 
   const isActive = (path) => {
     if (path === '/dashboard-v2') {
@@ -65,8 +99,8 @@ function FloatingMenu() {
     }
   ]
 
-  // On detail pages, show hamburger menu
-  if (isDetailPage) {
+  // On detail pages OR collapsed state, show hamburger menu
+  if (isDetailPage || isCollapsed) {
     return (
       <div className="floating-menu-container">
         {/* Backdrop */}
