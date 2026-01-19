@@ -16,8 +16,8 @@ function FloatingMenu() {
   }, [location.pathname])
 
   const isActive = (path) => {
-    if (path === '/dashboard') {
-      return location.pathname === '/dashboard'
+    if (path === '/dashboard-v2') {
+      return location.pathname === '/dashboard-v2'
     }
     if (path === '/members') {
       return location.pathname.startsWith('/members') ||
@@ -32,7 +32,7 @@ function FloatingMenu() {
 
   const menuItems = [
     {
-      path: '/dashboard',
+      path: '/dashboard-v2',
       label: 'Home',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
