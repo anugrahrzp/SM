@@ -42,38 +42,6 @@ function DashboardV2() {
           </div>
         </div>
 
-        {/* Profile Complete Card - Different design for complete profile */}
-        <div className="profile-completion-card profile-complete">
-          <div className="completion-header">
-            <div className="completion-info">
-              <h3>Profile Complete!</h3>
-              <p>You're a Super member with full access</p>
-            </div>
-            <div className="completion-badge-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-            </div>
-          </div>
-          <div className="completion-progress">
-            <div
-              className="completion-bar"
-              style={{ width: '100%' }}
-            />
-          </div>
-          <div className="completion-actions">
-            <Link to="/profile" className="completion-link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-              </svg>
-              View Profile
-            </Link>
-            <span className="super-badge">Super Member</span>
-          </div>
-        </div>
-
         {/* New Members Section */}
         <div className="section">
           <div className="section-header">
