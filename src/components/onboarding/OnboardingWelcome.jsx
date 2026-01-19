@@ -52,7 +52,7 @@ function OnboardingWelcome() {
               </svg>
             </div>
             <div className="feature-text">
-              <h3>Connect with Members</h3>
+              <h3>Connect with Community</h3>
               <p>Discover and network with like-minded professionals</p>
             </div>
           </div>

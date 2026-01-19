@@ -122,7 +122,7 @@ function OnboardingComplete() {
               </svg>
             </div>
             <div className="step-content">
-              <h5>Browse Members</h5>
+              <h5>Browse Community</h5>
               <p>Discover and connect with other community members</p>
             </div>
           </div>

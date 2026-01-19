@@ -114,7 +114,7 @@ function Dashboard() {
         {/* Browse Members Section */}
         <div className="section">
           <div className="section-header">
-            <h2 className="section-title">All Members</h2>
+            <h2 className="section-title">Community</h2>
             <span className="member-count">{stats.totalMembers}</span>
           </div>
 
@@ -138,7 +138,7 @@ function Dashboard() {
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
-              Browse Members
+              Browse Community
             </Link>
             <Link to="/gurukul" className="quick-action-btn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

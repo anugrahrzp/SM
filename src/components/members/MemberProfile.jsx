@@ -17,7 +17,7 @@ function MemberProfile() {
         <div className="page-content">
           <div className="not-found">
             <h2>Member not found</h2>
-            <Link to="/members">Back to Members</Link>
+            <Link to="/members">Back to Community</Link>
           </div>
         </div>
       </>

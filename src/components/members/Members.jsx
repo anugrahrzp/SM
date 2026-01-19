@@ -108,7 +108,7 @@ function Members() {
               <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
           </Link>
-          <h1 className="members-title">Members</h1>
+          <h1 className="members-title">Community</h1>
           <div className="header-spacer"></div>
         </div>
 
@@ -260,7 +260,7 @@ function Members() {
             {/* Count Row */}
             <div className="members-toolbar">
               <span className="members-count">
-                Gang Businesses ({filteredServices.length})
+                Community Businesses ({filteredServices.length})
               </span>
               <span className="member-discount-badge">Member discounts available</span>
             </div>

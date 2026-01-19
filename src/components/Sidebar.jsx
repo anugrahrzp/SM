@@ -64,7 +64,7 @@ function Sidebar() {
             <input
               type="text"
               className="sidebar-search-input"
-              placeholder="Search members..."
+              placeholder="Search community..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -100,7 +100,7 @@ function Sidebar() {
               </svg>
             </div>
             <div className="sidebar-nav-content">
-              <span className="sidebar-nav-label">Browse Members</span>
+              <span className="sidebar-nav-label">Browse Community</span>
               <span className="sidebar-nav-sublabel">Find and connect</span>
             </div>
             <svg className="sidebar-nav-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
