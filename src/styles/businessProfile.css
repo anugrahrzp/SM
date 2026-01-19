@@ -1,0 +1,395 @@
+/* Business Profile Page */
+.business-profile-page {
+  padding-bottom: 100px; /* Space for floating menu */
+}
+
+/* Header */
+.business-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.business-profile-header .back-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.business-profile-header .back-btn:hover {
+  background-color: var(--light-gray);
+}
+
+.business-badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: var(--primary-green);
+  color: white;
+  font-family: var(--font-accent);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.business-badge-header svg {
+  stroke: white;
+}
+
+.business-profile-header .share-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.business-profile-header .share-btn:hover {
+  background-color: var(--light-gray);
+}
+
+/* Business Hero */
+.business-hero {
+  margin-bottom: 20px;
+}
+
+.business-title {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.business-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.business-category-tag {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--medium-gray);
+}
+
+.business-type-tag {
+  font-family: var(--font-accent);
+  font-size: 12px;
+  padding: 4px 10px;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Description Section */
+.business-description-section {
+  margin-bottom: 20px;
+}
+
+.business-full-description {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--dark-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Discount Highlight */
+.business-discount-highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, var(--primary-green-light) 0%, #d4ebc4 100%);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.business-discount-highlight svg {
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.business-discount-highlight span {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+/* Services Section (for service businesses) */
+.business-services-section {
+  margin-bottom: 24px;
+}
+
+.services-section-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+}
+
+.services-simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+}
+
+.service-item svg {
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.service-item span {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+
+.services-cta-note {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+  margin-top: 12px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Product Catalogue Section */
+.business-catalogue-section {
+  margin-bottom: 24px;
+}
+
+.catalogue-section-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-name {
+  display: block;
+  padding: 12px;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+/* Contact Section */
+.business-contact-section {
+  margin-bottom: 24px;
+}
+
+.contact-section-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 12px;
+}
+
+.whatsapp-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #25D366;
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.whatsapp-contact-btn:hover {
+  background-color: #1fb855;
+}
+
+.whatsapp-contact-btn:active {
+  transform: scale(0.98);
+}
+
+.whatsapp-contact-btn svg {
+  flex-shrink: 0;
+}
+
+/* Founders Section */
+.business-founders-section {
+  margin-bottom: 24px;
+}
+
+.founders-section-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+}
+
+.founders-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.founder-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.founder-profile-card:hover {
+  border-color: var(--primary-green-light);
+  box-shadow: 0 2px 8px rgba(100, 131, 73, 0.1);
+}
+
+.founder-profile-avatar {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.founder-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-profile-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.founder-profile-name {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+.founder-profile-role {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--dark-gray);
+}
+
+.founder-profile-location {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: var(--medium-gray);
+}
+
+.founder-arrow {
+  color: var(--medium-gray);
+  flex-shrink: 0;
+}
+
+/* Not Found */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.not-found h2 {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+}
+
+.not-found a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+}

@@ -1,0 +1,249 @@
+/* Floating Dock Navigation */
+.floating-dock {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #1a1a1a;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Individual Dock Item */
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 16px;
+  border-radius: 24px;
+  text-decoration: none;
+  color: #888;
+  transition: all 0.2s ease;
+}
+
+.dock-item:hover {
+  color: #aaa;
+}
+
+/* Active State */
+.dock-item.active {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.dock-item.active .dock-icon svg {
+  stroke: white;
+}
+
+/* Icon */
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+/* Label */
+.dock-label {
+  font-family: var(--font-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   Menu Wrapper - Contains both states
+   ========================================== */
+
+.floating-menu-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Full Dock - visible by default */
+.floating-dock.floating-dock-full {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-dock.floating-dock-full.hidden {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.8);
+  pointer-events: none;
+}
+
+/* Hamburger Container - hidden by default */
+.hamburger-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1003;
+}
+
+.hamburger-container.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* Backdrop */
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+/* Hamburger Button - Bottom Right */
+.hamburger-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1002;
+  pointer-events: auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-btn:hover {
+  background-color: #2a2a2a;
+}
+
+.hamburger-btn.open {
+  background-color: var(--primary-green);
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: #888;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-btn:hover .hamburger-line {
+  background-color: #aaa;
+}
+
+.hamburger-btn.open .hamburger-line {
+  background-color: white;
+}
+
+/* Hamburger to X animation */
+.hamburger-btn.open .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Expandable Dock for Detail Pages */
+.floating-dock.floating-dock-expandable {
+  position: absolute;
+  bottom: 80px;
+  right: 16px;
+  left: auto;
+  transform: none;
+  flex-direction: column;
+  padding: 6px;
+  gap: 2px;
+  border-radius: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.9);
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+}
+
+.floating-dock.floating-dock-expandable.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.floating-dock.floating-dock-expandable.open .dock-item {
+  pointer-events: auto;
+}
+
+.floating-dock.floating-dock-expandable .dock-item {
+  padding: 12px;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 430px) {
+  .floating-dock {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+    justify-content: space-around;
+  }
+
+  .floating-dock.floating-dock-full {
+    transform: scale(1);
+  }
+
+  .floating-dock.floating-dock-full.hidden {
+    transform: scale(0.8);
+  }
+
+  .dock-item {
+    padding: 10px 12px;
+  }
+
+  .hamburger-btn {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .floating-dock.floating-dock-expandable {
+    bottom: 76px;
+    right: 16px;
+  }
+}

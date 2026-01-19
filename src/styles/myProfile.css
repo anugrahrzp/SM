@@ -1,0 +1,496 @@
+/* My Profile Page */
+.my-profile-page {
+  padding-bottom: 100px; /* Space for floating menu */
+}
+
+/* Header */
+.my-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 16px;
+}
+
+.page-title {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dark-gray);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: var(--light-gray);
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: var(--primary-green);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #567339;
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid var(--medium-gray);
+  border-radius: 8px;
+  color: var(--dark-gray);
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 8px 16px;
+  background-color: var(--primary-green);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Completion Card */
+.completion-card {
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.completion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.completion-label {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.completion-percent {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.completion-bar {
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.completion-fill {
+  height: 100%;
+  background-color: var(--primary-green);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.completion-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: var(--medium-gray);
+}
+
+.checklist-item.done {
+  color: var(--primary-green);
+}
+
+.checklist-item svg {
+  flex-shrink: 0;
+}
+
+.checkbox-empty {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--medium-gray);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Profile Avatar Section */
+.profile-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.my-profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.my-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.profile-name-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.my-profile-name {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+.my-profile-page .status-badge {
+  font-family: var(--font-accent);
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.my-profile-email {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+}
+
+/* Profile Sections */
+.profile-section {
+  margin-bottom: 24px;
+}
+
+.my-profile-page .section-title {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--medium-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: var(--medium-gray);
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+/* Edit Fields */
+.edit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-row {
+  display: flex;
+  gap: 12px;
+}
+
+.field-row .field-group {
+  flex: 1;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-group label {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  color: var(--medium-gray);
+}
+
+.my-profile-page .input-field {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--dark-gray);
+  outline: none;
+}
+
+.my-profile-page .input-field:focus {
+  box-shadow: 0 0 0 2px var(--primary-green-light);
+}
+
+.my-profile-page .textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* View Fields */
+.view-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-card {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.info-role {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.info-org {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+}
+
+.quote-display {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--primary-green-light);
+  border-radius: 10px;
+}
+
+.quote-display .quote-icon {
+  color: var(--primary-green);
+  opacity: 0.5;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.quote-display p {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dark-gray);
+  line-height: 1.5;
+}
+
+.bio-text {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.location-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+}
+
+.joy-display {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--dark-gray);
+}
+
+.joy-label {
+  color: var(--medium-gray);
+  margin-right: 4px;
+}
+
+/* Social Links Display */
+.social-links-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-links-display .social-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-links-display .social-link:hover {
+  opacity: 0.8;
+}
+
+.social-links-display .linkedin {
+  background-color: #E8F4F8;
+  color: #0077B5;
+}
+
+.social-links-display .twitter {
+  background-color: #E8E8E8;
+  color: #000000;
+}
+
+.social-links-display .instagram {
+  background-color: #FCE4EC;
+  color: #E1306C;
+}
+
+.no-links {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+  font-style: italic;
+}
+
+/* Video Upload Grid */
+.video-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.video-upload-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.video-upload-card:hover {
+  background-color: #e8e8e8;
+}
+
+.video-status {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px dashed var(--medium-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--medium-gray);
+}
+
+.video-status.uploaded {
+  background-color: var(--primary-green);
+  border: none;
+  color: white;
+}
+
+.video-label {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+.video-status-text {
+  font-family: var(--font-secondary);
+  font-size: 10px;
+  color: var(--medium-gray);
+}
+
+/* Submit for Review Button */
+.submit-review-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-green);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background-color 0.2s;
+}
+
+.submit-review-btn:hover {
+  background-color: #567339;
+}

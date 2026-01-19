@@ -52,6 +52,7 @@
   padding: 0 24px;
   height: calc(844px - 44px);
   overflow-y: auto;
+  position: relative;
 }
 
 /* Responsive - On smaller screens, remove frame styling */
