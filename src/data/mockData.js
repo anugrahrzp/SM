@@ -9,12 +9,25 @@ export const currentUser = {
   whatsapp: '919876500001',
   profilePicture: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
   currentOrganization: 'Super Morpheus',
-  currentRole: 'Product Lead',
+  currentRole: 'Founder',
+  role: 'founder', // founder, employee, freelancer
   livesIn: 'Bengaluru, India',
   introduction: 'Passionate about building products that make a difference. Love connecting with fellow entrepreneurs and sharing ideas.',
   profileCompletion: 65,
   status: 'basic', // basic, active, super
-  joinedDate: '2025-01-15'
+  joinedDate: '2025-01-15',
+  business: {
+    name: 'Super Morpheus',
+    type: 'service', // service, product, both
+    category: 'Product & Design',
+    description: 'We help startups build user-centric products from 0 to 1. Product strategy, UX design, and development.',
+    offerings: [
+      { name: 'Product Strategy Workshop', regularPrice: '₹50,000', memberPrice: '₹40,000' },
+      { name: 'MVP Development', regularPrice: '₹3,00,000', memberPrice: '₹2,50,000' }
+    ],
+    memberDiscount: '20% off for Gang members',
+    contactVia: 'whatsapp'
+  }
 }
 
 export const members = [
@@ -25,6 +38,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'TechStart India',
     currentRole: 'Founder & CEO',
+    role: 'founder',
     livesIn: 'Mumbai, India',
     email: 'priya@techstart.in',
     phone: '+91 98765 43210',
@@ -36,6 +50,18 @@ export const members = [
     status: 'super',
     profileCompletion: 100,
     tags: ['EdTech', 'AI/ML', 'Startup'],
+    business: {
+      name: 'TechStart India',
+      type: 'product',
+      category: 'EdTech',
+      description: 'AI-powered personalized learning platform for K-12 students. Making quality education accessible to every child in India.',
+      offerings: [
+        { name: 'School License (Annual)', regularPrice: '₹2,00,000', memberPrice: '₹1,60,000' },
+        { name: 'Individual Subscription', regularPrice: '₹5,000/year', memberPrice: '₹4,000/year' }
+      ],
+      memberDiscount: '20% off for Gang members',
+      contactVia: 'whatsapp'
+    },
     twitter: 'https://twitter.com/priyasharma',
     linkedin: 'https://linkedin.com/in/priyasharma',
     instagram: 'https://instagram.com/priya.sharma',
@@ -60,6 +86,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'GreenEnergy Solutions',
     currentRole: 'Co-Founder',
+    role: 'founder',
     livesIn: 'Delhi, India',
     email: 'rahul@greenenergy.co',
     phone: '+91 98765 43211',
@@ -71,6 +98,19 @@ export const members = [
     status: 'active',
     profileCompletion: 85,
     tags: ['CleanTech', 'Sustainability', 'B2B'],
+    business: {
+      name: 'GreenEnergy Solutions',
+      type: 'both',
+      category: 'Clean Energy',
+      description: 'Affordable solar solutions for rural India. Installation, maintenance, and financing for homes and small businesses.',
+      offerings: [
+        { name: 'Home Solar Kit (3kW)', regularPrice: '₹1,80,000', memberPrice: '₹1,50,000' },
+        { name: 'Solar Consultation', regularPrice: '₹5,000', memberPrice: 'Free' },
+        { name: 'Annual Maintenance', regularPrice: '₹12,000', memberPrice: '₹8,000' }
+      ],
+      memberDiscount: '15-20% off for Gang members',
+      contactVia: 'whatsapp'
+    },
     twitter: 'https://twitter.com/rahulverma_green',
     linkedin: 'https://linkedin.com/in/rahulverma',
     contentLinks: ['https://greenenergy.co/blog'],
@@ -94,6 +134,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'HealthFirst',
     currentRole: 'CTO',
+    role: 'employee',
     livesIn: 'Chennai, India',
     email: 'ananya@healthfirst.com',
     phone: '+91 98765 43212',
@@ -127,6 +168,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'FinLeap',
     currentRole: 'Founder',
+    role: 'founder',
     livesIn: 'Bengaluru, India',
     email: 'vikram@finleap.in',
     phone: '+91 98765 43213',
@@ -137,6 +179,18 @@ export const members = [
     status: 'active',
     profileCompletion: 90,
     tags: ['FinTech', 'Payments', 'Inclusion'],
+    business: {
+      name: 'FinLeap',
+      type: 'service',
+      category: 'FinTech',
+      description: 'Banking services through local kirana stores. Enabling financial inclusion for tier-2 and tier-3 towns.',
+      offerings: [
+        { name: 'Business Banking Setup', regularPrice: '₹10,000', memberPrice: '₹7,500' },
+        { name: 'Payment Gateway Integration', regularPrice: '₹25,000', memberPrice: '₹20,000' }
+      ],
+      memberDiscount: '25% off for Gang members',
+      contactVia: 'whatsapp'
+    },
     linkedin: 'https://linkedin.com/in/vikramsingh',
     twitter: 'https://twitter.com/vikram_finleap',
     hasVideos: { earlyLife: true, professionalLife: false, currentLife: true },
@@ -158,7 +212,8 @@ export const members = [
     lastName: 'Patel',
     profilePicture: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'CreativeMinds',
-    currentRole: 'Design Director',
+    currentRole: 'Founder',
+    role: 'founder',
     livesIn: 'Pune, India',
     email: 'meera@creativeminds.co',
     phone: '+91 98765 43214',
@@ -169,6 +224,19 @@ export const members = [
     status: 'basic',
     profileCompletion: 45,
     tags: ['Design', 'UX', 'Consulting'],
+    business: {
+      name: 'CreativeMinds',
+      type: 'service',
+      category: 'Design',
+      description: 'Design studio helping early-stage startups create products that users love. UX design, branding, and design systems.',
+      offerings: [
+        { name: 'Brand Identity Package', regularPrice: '₹75,000', memberPrice: '₹60,000' },
+        { name: 'App UI/UX Design', regularPrice: '₹1,50,000', memberPrice: '₹1,20,000' },
+        { name: 'Design Audit', regularPrice: '₹25,000', memberPrice: '₹18,000' }
+      ],
+      memberDiscount: '20% off for Gang members',
+      contactVia: 'whatsapp'
+    },
     linkedin: 'https://linkedin.com/in/meerapatel',
     instagram: 'https://instagram.com/meera.designs',
     hasVideos: { earlyLife: false, professionalLife: false, currentLife: false },
@@ -191,6 +259,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'LogiTech Solutions',
     currentRole: 'CEO',
+    role: 'founder',
     livesIn: 'Hyderabad, India',
     email: 'arjun@logitech.in',
     phone: '+91 98765 43215',
@@ -201,6 +270,19 @@ export const members = [
     status: 'super',
     profileCompletion: 100,
     tags: ['LogiTech', 'AI', 'Supply Chain'],
+    business: {
+      name: 'LogiTech Solutions',
+      type: 'service',
+      category: 'Logistics',
+      description: 'AI-powered supply chain optimization for SMEs. Reduce logistics costs by up to 30% with smart routing and inventory management.',
+      offerings: [
+        { name: 'Supply Chain Audit', regularPrice: '₹50,000', memberPrice: '₹35,000' },
+        { name: 'LogiTech Platform (Annual)', regularPrice: '₹3,00,000', memberPrice: '₹2,40,000' },
+        { name: 'Implementation & Training', regularPrice: '₹1,00,000', memberPrice: '₹75,000' }
+      ],
+      memberDiscount: '20-30% off for Gang members',
+      contactVia: 'whatsapp'
+    },
     linkedin: 'https://linkedin.com/in/arjunnair',
     twitter: 'https://twitter.com/arjun_logitech',
     contentLinks: ['https://logitech.in/insights'],
@@ -224,6 +306,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'FoodTech Labs',
     currentRole: 'Founder',
+    role: 'founder',
     livesIn: 'Bengaluru, India',
     email: 'sneha@foodtechlabs.com',
     phone: '+91 98765 43216',
@@ -234,6 +317,19 @@ export const members = [
     status: 'active',
     profileCompletion: 80,
     tags: ['FoodTech', 'Sustainability', 'D2C'],
+    business: {
+      name: 'FoodTech Labs',
+      type: 'product',
+      category: 'Food & Beverage',
+      description: 'Sustainable food delivery platform. Organic meal kits and plastic-free packaging delivered via electric vehicles.',
+      offerings: [
+        { name: 'Weekly Meal Kit (4 meals)', regularPrice: '₹2,000', memberPrice: '₹1,600' },
+        { name: 'Monthly Subscription', regularPrice: '₹7,000', memberPrice: '₹5,500' },
+        { name: 'Corporate Catering (per head)', regularPrice: '₹500', memberPrice: '₹400' }
+      ],
+      memberDiscount: '20% off for Gang members',
+      contactVia: 'whatsapp'
+    },
     linkedin: 'https://linkedin.com/in/snehagupta',
     instagram: 'https://instagram.com/sneha.foodie',
     contentLinks: ['https://foodtechlabs.com/stories'],
@@ -257,6 +353,7 @@ export const members = [
     profilePicture: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face',
     currentOrganization: 'SpaceTech Ventures',
     currentRole: 'CTO',
+    role: 'employee',
     livesIn: 'Chennai, India',
     email: 'karthik@spacetech.in',
     phone: '+91 98765 43217',
