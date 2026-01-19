@@ -108,24 +108,44 @@ function BusinessProfile() {
           <span>{business.memberDiscount}</span>
         </div>
 
-        {/* Offerings */}
-        {business.offerings && business.offerings.length > 0 && (
-          <div className="business-offerings-section">
-            <h3 className="offerings-section-title">Services & Pricing</h3>
-            <div className="offerings-list">
+        {/* Services List (for service businesses) */}
+        {business.type === 'service' && business.offerings && business.offerings.length > 0 && (
+          <div className="business-services-section">
+            <h3 className="services-section-title">What We Offer</h3>
+            <ul className="services-simple-list">
               {business.offerings.map((offering, index) => (
-                <div key={index} className="offering-card">
-                  <div className="offering-info">
-                    <span className="offering-title">{offering.name}</span>
+                <li key={index} className="service-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>{offering.name}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="services-cta-note">WhatsApp us for pricing and availability</p>
+          </div>
+        )}
+
+        {/* Product Catalogue (for product businesses) */}
+        {(business.type === 'product' || business.type === 'both') && business.offerings && business.offerings.length > 0 && (
+          <div className="business-catalogue-section">
+            <h3 className="catalogue-section-title">
+              {business.type === 'both' ? 'Products & Services' : 'Product Catalogue'}
+            </h3>
+            <div className="catalogue-list">
+              {business.offerings.map((offering, index) => (
+                <div key={index} className="catalogue-item">
+                  <div className="catalogue-info">
+                    <span className="catalogue-name">{offering.name}</span>
                   </div>
-                  <div className="offering-pricing">
+                  <div className="catalogue-pricing">
                     <span className="price-regular">{offering.regularPrice}</span>
                     <span className="price-member">{offering.memberPrice}</span>
                   </div>
                 </div>
               ))}
             </div>
-            <p className="pricing-note">* Member prices shown in green</p>
+            <p className="catalogue-note">* Member prices shown in green</p>
           </div>
         )}
 

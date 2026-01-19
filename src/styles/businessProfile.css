@@ -139,12 +139,12 @@
   color: var(--primary-green);
 }
 
-/* Offerings Section */
-.business-offerings-section {
+/* Services Section (for service businesses) */
+.business-services-section {
   margin-bottom: 24px;
 }
 
-.offerings-section-title {
+.services-section-title {
   font-family: var(--font-primary);
   font-size: 18px;
   font-weight: 600;
@@ -152,13 +152,65 @@
   margin-bottom: 16px;
 }
 
-.offerings-list {
+.services-simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.offering-card {
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+}
+
+.service-item svg {
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.service-item span {
+  font-family: var(--font-secondary);
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+
+.services-cta-note {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  color: var(--medium-gray);
+  margin-top: 12px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Product Catalogue Section */
+.business-catalogue-section {
+  margin-bottom: 24px;
+}
+
+.catalogue-section-title {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 16px;
+}
+
+.catalogue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalogue-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -168,19 +220,19 @@
   border-radius: 12px;
 }
 
-.offering-info {
+.catalogue-info {
   flex: 1;
   min-width: 0;
 }
 
-.offering-title {
+.catalogue-name {
   font-family: var(--font-secondary);
   font-size: 14px;
   font-weight: 500;
   color: var(--dark-gray);
 }
 
-.offering-pricing {
+.catalogue-pricing {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -201,7 +253,7 @@
   color: var(--primary-green);
 }
 
-.pricing-note {
+.catalogue-note {
   font-family: var(--font-secondary);
   font-size: 12px;
   color: var(--medium-gray);

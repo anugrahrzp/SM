@@ -929,6 +929,34 @@
   margin-bottom: 16px;
 }
 
+/* Services List (for service businesses) */
+.business-services-list {
+  margin-bottom: 16px;
+}
+
+.service-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.service-list-item:last-child {
+  border-bottom: none;
+}
+
+.service-list-item svg {
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.service-list-item span {
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
 .business-offerings {
   margin-bottom: 16px;
 }
