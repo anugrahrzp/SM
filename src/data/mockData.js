@@ -56,8 +56,8 @@ export const members = [
       category: 'EdTech',
       description: 'AI-powered personalized learning platform for K-12 students. Making quality education accessible to every child in India.',
       offerings: [
-        { name: 'School License (Annual)', regularPrice: '₹2,00,000', memberPrice: '₹1,60,000' },
-        { name: 'Individual Subscription', regularPrice: '₹5,000/year', memberPrice: '₹4,000/year' }
+        { name: 'School License (Annual)', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop' },
+        { name: 'Individual Subscription', image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=400&h=300&fit=crop' }
       ],
       memberDiscount: '20% off for Gang members',
       contactVia: 'whatsapp'
@@ -104,9 +104,9 @@ export const members = [
       category: 'Clean Energy',
       description: 'Affordable solar solutions for rural India. Installation, maintenance, and financing for homes and small businesses.',
       offerings: [
-        { name: 'Home Solar Kit (3kW)', regularPrice: '₹1,80,000', memberPrice: '₹1,50,000' },
-        { name: 'Solar Consultation', regularPrice: '₹5,000', memberPrice: 'Free' },
-        { name: 'Annual Maintenance', regularPrice: '₹12,000', memberPrice: '₹8,000' }
+        { name: 'Home Solar Kit (3kW)', image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop' },
+        { name: 'Solar Consultation', image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop' },
+        { name: 'Annual Maintenance', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop' }
       ],
       memberDiscount: '15-20% off for Gang members',
       contactVia: 'whatsapp',
@@ -324,9 +324,9 @@ export const members = [
       category: 'Food & Beverage',
       description: 'Sustainable food delivery platform. Organic meal kits and plastic-free packaging delivered via electric vehicles.',
       offerings: [
-        { name: 'Weekly Meal Kit (4 meals)', regularPrice: '₹2,000', memberPrice: '₹1,600' },
-        { name: 'Monthly Subscription', regularPrice: '₹7,000', memberPrice: '₹5,500' },
-        { name: 'Corporate Catering (per head)', regularPrice: '₹500', memberPrice: '₹400' }
+        { name: 'Weekly Meal Kit (4 meals)', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop' },
+        { name: 'Monthly Subscription', image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop' },
+        { name: 'Corporate Catering (per head)', image: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=400&h=300&fit=crop' }
       ],
       memberDiscount: '20% off for Gang members',
       contactVia: 'whatsapp'

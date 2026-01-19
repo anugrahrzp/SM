@@ -128,20 +128,22 @@ function BusinessProfile() {
 
         {/* Product Catalogue (for product businesses) */}
         {(business.type === 'product' || business.type === 'both') && business.offerings && business.offerings.length > 0 && (
-          <div className="business-services-section">
-            <h3 className="services-section-title">
+          <div className="business-catalogue-section">
+            <h3 className="catalogue-section-title">
               {business.type === 'both' ? 'Products & Services' : 'Product Catalogue'}
             </h3>
-            <ul className="services-simple-list">
+            <div className="product-grid">
               {business.offerings.map((offering, index) => (
-                <li key={index} className="service-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  <span>{offering.name}</span>
-                </li>
+                <div key={index} className="product-card">
+                  {offering.image && (
+                    <div className="product-image">
+                      <img src={offering.image} alt={offering.name} />
+                    </div>
+                  )}
+                  <span className="product-name">{offering.name}</span>
+                </div>
               ))}
-            </ul>
+            </div>
             <p className="services-cta-note">WhatsApp us for pricing and availability</p>
           </div>
         )}
