@@ -14,6 +14,7 @@
 
 .header-left {
   flex: 1;
+  padding-left: 48px; /* Space for hamburger menu */
 }
 
 .welcome-greeting {
