@@ -1,6 +1,6 @@
 /* My Profile Page */
 .my-profile-page {
-  padding-bottom: 90px;
+  padding-bottom: 100px; /* Space for floating menu */
 }
 
 /* Header */

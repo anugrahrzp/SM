@@ -1,6 +1,6 @@
 /* Dashboard Page */
 .dashboard-page {
-  padding-bottom: 80px; /* Space for bottom nav */
+  padding-bottom: 100px; /* Space for floating menu */
 }
 
 /* Dashboard Header */
@@ -14,7 +14,6 @@
 
 .header-left {
   flex: 1;
-  padding-left: 48px; /* Space for hamburger menu */
 }
 
 .welcome-greeting {

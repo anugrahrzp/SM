@@ -1,6 +1,6 @@
 /* Members Page */
 .members-page {
-  padding-bottom: 80px;
+  padding-bottom: 100px; /* Space for floating menu */
 }
 
 /* Header */

@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import StatusBar from '../StatusBar'
-import Sidebar from '../Sidebar'
+import FloatingMenu from '../FloatingMenu'
 import { members } from '../../data/mockData'
 import '../../styles/memberProfile.css'
 
@@ -64,7 +64,6 @@ function MemberProfile() {
   return (
     <>
       <StatusBar />
-      <Sidebar />
       <div className="page-content profile-page">
         {/* Top Bar - Status Badge + Profile Link */}
         <div className="profile-top-bar">
@@ -585,17 +584,7 @@ function MemberProfile() {
           </div>
         </div>
 
-        {/* Floating Action Button */}
-        <button className="fab-button" onClick={() => {}}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="8" y1="6" x2="21" y2="6"/>
-            <line x1="8" y1="12" x2="21" y2="12"/>
-            <line x1="8" y1="18" x2="21" y2="18"/>
-            <circle cx="4" cy="6" r="1.5" fill="currentColor"/>
-            <circle cx="4" cy="12" r="1.5" fill="currentColor"/>
-            <circle cx="4" cy="18" r="1.5" fill="currentColor"/>
-          </svg>
-        </button>
+        <FloatingMenu />
 
         {/* Content Links */}
         {member.contentLinks && member.contentLinks.length > 0 && (
